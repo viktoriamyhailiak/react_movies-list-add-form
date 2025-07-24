@@ -11,7 +11,7 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
 
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [imgUrl, setImageUrl] = useState('');
+  const [imgUrl, setImgUrl] = useState('');
   const [imdbUrl, setImdbUrl] = useState('');
   const [imdbId, setImdbId] = useState('');
 
@@ -35,7 +35,7 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
     onAdd(movie);
     setTitle('');
     setDescription('');
-    setImageUrl('');
+    setImgUrl('');
     setImdbId('');
     setImdbUrl('');
     setCount(prev => prev + 1);
@@ -69,7 +69,7 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
         label="Image URL"
         value={imgUrl}
         required
-        onChange={e => setImageUrl(e)}
+        onChange={e => setImgUrl(e)}
       />
 
       <TextField
